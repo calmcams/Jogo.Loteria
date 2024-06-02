@@ -1,3 +1,3 @@
-# VRaptor Produtos
+# VRaptor Project
 
-Projeto do curso online de VRaptor 4
+# Jogo Loteria Java / HTML
