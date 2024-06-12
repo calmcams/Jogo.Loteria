@@ -1,12 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jstl/core" prefix="c" %>   
-    
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,18 +47,17 @@
                       <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Senha">
+                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Senha" onkeypress="checkEnter(event)">
                     </div>
-                    <a href="<c:url value="dashboard"/>" class="btn btn-primary btn-user btn-block">
+                    <a id="loginButton" href="<c:url value='/dashboard'/>" class="btn btn-primary btn-user btn-block">
                       Login
                     </a>
                     <hr>
-                    <a href="<c:url value="cadastrar"/>" class="btn btn-google btn-user btn-block">
+                    <a href="<c:url value='/cadastrar'/>" class="btn btn-google btn-user btn-block">
                       Cadastrar
                     </a>
                   </form>
                   <hr>
-                  
                 </div>
               </div>
             </div>
@@ -82,6 +79,15 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  
+  <script>
+    function checkEnter(event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Evita o comportamento padrão do enter
+        document.getElementById("loginButton").click();
+      }
+    }
+  </script>
 
 </body>
 
