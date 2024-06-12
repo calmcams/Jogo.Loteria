@@ -110,7 +110,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jogador</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <img class="img-profile rounded-circle" src="${pageContext.request.contextPath}/img/bolls.jpg">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -212,7 +212,7 @@
         <div class="modal-body">Selecione "Sair" abaixo se você está pronto para encerrar a sessão atual.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="login.html">Sair</a>
+          <a class="btn btn-primary" href="<c:url value='/login'/>">Sair</a>
         </div>
       </div>
     </div>
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
         totalGanhos += premio; // Adiciona o prêmio ao total de ganhos
         exibirResultado(acertos, premio, numerosSorteados);
       } else {
-        mensagemAposta.textContent = 'Que pena, não foi desta vez.';
+        mensagemAposta.textContent = 'Que pena, não foi dessa vez. Nenhum numero acertado.';
         mensagemAposta.className = 'alert alert-danger';
         numerosSorteadosDiv.innerHTML = ''; // Limpa os números sorteados
       }
@@ -347,4 +347,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
   </body>
   </html>
-
