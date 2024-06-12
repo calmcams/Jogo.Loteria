@@ -1,12 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jstl/core" prefix="c" %>   
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,13 +30,15 @@
       <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
         <div class="row">
-          <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+          <div class="col-lg-5 d-none d-lg-block bg-register-image">
+            <img src="${pageContext.request.contextPath}/img/dindin.voando.jpg" alt="Cadastrar Fundo" style="width: 110%; height: auto;">
+          </div>
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Cadastrar!</h1>
               </div>              
-              <form method="post" class="user" action="<c:url value="cadastrar/salvausuario"/>">
+              <form method="post" class="user" action="<c:url value='/cadastrar/salvausuario'/>">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input name="usuario.nome" type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Nome">
@@ -65,7 +65,7 @@
               </form>
               <hr>
               <div class="text-center">
-                <a class="small" href="<c:url value="login"/>">Ja tem uma conta? Login!</a>
+                <a class="small" href="<c:url value='/login'/>">Ja tem uma conta? Login!</a>
               </div>
             </div>
           </div>
